@@ -41,11 +41,10 @@ The Observer pattern is a specific type of design pattern that describes how to 
 
 # System
 The purpose of the project is to add functionality to UndoableStringBuilder.  
-UndoableStringBuilder is a class which is based on StringBuilder with support for the:
+UndoableStringBuilder is a class which is based on StringBuilder with support for the: 
 
-``` java 
-undo() 
-```
+`public void undo()`
+
 This function keep a list of all operations set to an object, and return the last value that enter to the list.  
 This project add an option to organize a group of members of updates on the status of  
 **UndoableStringBuilder** and send all updates to it in real time.
@@ -53,10 +52,23 @@ This project add an option to organize a group of members of updates on the stat
 ## Interface
 
 ### Member <kbd> -> </kbd> Observer
-
+> This interface have only one method, _update(UndoableStringBuilder usb)_ that does not have any implementation details. Instead, it serves as a blueprint for
+> other classes to implement. 
 
 ### Sender <kbd> -> </kbd> Observerable
+> This interface have method that similar to UndoableStringBuilder, this methods does not have any implementation details. Instead, it
+> serves as a blueprint for other classes to implement.
 
+## Class
+
+### UndoableStringBuilder
+> This is our StringBuilder class with support for the undo operation. To do this,
+> we delegate all methods to the standard StringBuilder, and keep a list of all operations
+> to perform undo() in our class . An undo() method be written for `insert()` , `delete()` , `append()` .
+
+### ConcreteMember
+
+### GroupAdmin
 
 
 
