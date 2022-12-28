@@ -1,7 +1,7 @@
 # Project Observer
+In this project you will find principles of the design pattern of **Observer**, And how we chose to perform it.
 
-In this project we use the principles of **Observer** design patterns.
-
+### OOP
 OOP stands for Object-Oriented Programming.  
 Procedural programming is about writing procedures or methods that perform operations on the data,   
 while object-oriented programming is about creating objects that contain both data and methods.  
@@ -49,6 +49,13 @@ This function keep a list of all operations set to an object, and return the las
 This project add an option to organize a group of members of updates on the status of  
 **UndoableStringBuilder** and send all updates to it in real time.
 
+In order for our run times to be efficient we used _HashSet_. _HashSet_ is a collection that stores a set of elements. It is implemented using a hash table, which
+allows for fast insertion, deletion, and lookup of elements.
+_HashSet_ does not allow duplicate elements, and it does not maintain the insertion order of the elements. This means that the order in which elements are added 
+to a _HashSet_ is not preserved, and trying to add a duplicate element to the set will have no effect. It is an efficient data structure for storing and 
+manipulating a set of elements in Java.
+
+
 ## Interface
 
 ### Member <kbd> -> </kbd> Observer
@@ -67,9 +74,17 @@ This project add an option to organize a group of members of updates on the stat
 > to perform undo() in our class . An undo() method be written for `insert()` , `delete()` , `append()` .
 
 ### ConcreteMember
+> This class implements the class of Member, take the _update_ function and executes it.
+> Each member that entered to the list, get a _Data_ to point on our UndoableStringBuilder.
+> Member can return a _Data_ with the `getData` function that return string.  
 
 ### GroupAdmin
+> This class implements the class of Member, overriding the functions and executes them.
+> In order to executes all the functions we made a shallow copy to UndoableStringBuilder, and use his ability in the functions.
+> `notifyAll` - This function updates all members on the changes that have been made on UndoableStringBuilder. 
 
+
+# How to run the project
 
 
 
