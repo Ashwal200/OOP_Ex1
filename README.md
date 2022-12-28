@@ -85,7 +85,13 @@ We chose time efficiency over memory efficiency.
 
 
 # How to run the project
-
-
+In order to run this project follow this steps:
+  - Push on `code` and download the zip.
+  - Extract the zip file.
+  - Open a new java project.
+  - Write the file path.
+  - Press on __pom.xml__ press ok.
+  - Open as project.
+Now you can run the file successfully.
 
   
