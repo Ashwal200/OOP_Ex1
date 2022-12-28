@@ -2,13 +2,17 @@ package observer;
 
 public class ConcreteMember implements Member{
 
-    private String data;
+    // The data object is instance of UndoableStringBuilder for the shallow copy.
+    private UndoableStringBuilder data;
 
     /**
      * Constructor to build a ConcreteMember.
+     * Set the default data value to the string null.
      */
     public ConcreteMember(){
+        data = new UndoableStringBuilder("null");
     }
+
 
     /**
      * Update the {@code data} to the new data from the GroupAdmin.
@@ -17,15 +21,14 @@ public class ConcreteMember implements Member{
      */
     @Override
     public void update(UndoableStringBuilder usb){
-        data = usb.toString();
+        data = usb;
     }
 
     /**
-     * Return the current data of the member.
-     * @return the member's data.
+     * @return the current data of the member as a String.
      */
     public String getData(){
-        return data;
+        return data.toString();
     }
 
 }

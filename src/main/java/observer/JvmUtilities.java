@@ -41,29 +41,4 @@ public final class JvmUtilities {
                 "\n" +JvmUtilities.objectFootprint(o);
     }
 
-
-    public static void main(String[] args) {
-
-        ConcreteMember m1 = new ConcreteMember();
-        ConcreteMember m2 = new ConcreteMember();
-        ConcreteMember m3 = new ConcreteMember();
-        ConcreteMember m4 = new ConcreteMember();
-        ConcreteMember m5 = new ConcreteMember();
-        GroupAdmin sender = new GroupAdmin();
-
-        System.out.println(objectTotalSize(sender));
-        System.out.println(objectFootprint(sender));
-
-        sender.register(m1);
-        sender.register(m2);
-        sender.register(m3);
-        sender.register(m4);
-
-        System.out.println(objectTotalSize(sender));
-        System.out.println(objectFootprint(sender));
-        System.out.println(jvmInfo());
-        sender.unregister(m5);
-    }
-
-
 }

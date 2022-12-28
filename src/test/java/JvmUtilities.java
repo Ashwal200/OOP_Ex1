@@ -39,6 +39,4 @@ public final class JvmUtilities {
                 "\n" +JvmUtilities.objectFootprint(o);
     }
 
-
-
 }
