@@ -53,8 +53,8 @@ In order for our run times to be efficient we used _HashSet_. _HashSet_ is a col
 allows for fast insertion, deletion, and lookup of elements.
 _HashSet_ does not allow duplicate elements, and it does not maintain the insertion order of the elements. This means that the order in which elements are added 
 to a _HashSet_ is not preserved, and trying to add a duplicate element to the set will have no effect. It is an efficient data structure for storing and 
-manipulating a set of elements in Java.
-
+manipulating a set of elements in Java.  
+We chose time efficiency over memory efficiency.
 
 ## Interface
 
